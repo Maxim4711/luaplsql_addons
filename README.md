@@ -30,8 +30,8 @@ git clone https://github.com/tnodir/luasys.git
 git clone https://github.com/tnodir/luajit-windows.git
 git clone https://github.com/LuaJIT/LuaJIT.git luajit-2.0
 
-patch -u -b luajit-windows\src\lua5.1.c -i ..\patches\lua5.1.c.patch
-patch -u -b luajit-2.0\src\msvcbuild.bat -i ..\patches\luajit-msvcbuild.bat.patch
+patch -u -b luajit-windows\src\lua5.1.c -i %cd%\..\patches\lua5.1.c.patch
+patch -u -b luajit-2.0\src\msvcbuild.bat -i %cd%\..\patches\luajit-msvcbuild.bat.patch
 
 copy luajit-windows\src\lua5.1.c luajit-2.0\src
 copy luajit-windows\src\wluajit.c luajit-2.0\src
