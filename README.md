@@ -3,7 +3,7 @@
 addons for [plsql developer](https://www.allroundautomations.com/products/pl-sql-developer/) (by Allround Automations) 
 based on exciting [luaplsql plugin](https://github.com/tnodir/luaplsql.git) by Nodir Temirkhodjaev 
 # Addons
-* some text editing functions (in folder lua\Custom
+* some text editing functions (in folder lua\Custom)
   - selection uppercase
   - selection lowercase
   - selection single line comment
