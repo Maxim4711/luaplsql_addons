@@ -1,0 +1,23 @@
+--- "luajit\\src\\msvcbuild.bat"	1900-01-00 00:00:00 +0000
++++ msvcbuild.bat	1900-01-00 00:00:00 +0000
+@@ -143,6 +143,20 @@
+ if exist luajit.exe.manifest^
+   %LJMT% -manifest luajit.exe.manifest -outputresource:luajit.exe
+ 
++@rem Build the proxy DLL
++%LJCOMPILE% /MD /Zl lua5.1.c
++@if errorlevel 1 goto :BAD
++%LJLINK% /DLL /out:lua5.1.dll lua5.1.obj kernel32.lib
++@if errorlevel 1 goto :BAD
++
++@rem Build the windowless executable
++%LJCOMPILE% wluajit.c
++@if errorlevel 1 goto :BAD
++%LJLINK% /out:wluajit.exe /subsystem:windows wluajit.obj luajit.obj %LJLIBNAME%
++@if errorlevel 1 goto :BAD
++if exist wluajit.exe.manifest^
++  %LJMT% -manifest wluajit.exe.manifest -outputresource:wluajit.exe
++
+ @del *.obj *.manifest minilua.exe buildvm.exe
+ @del host\buildvm_arch.h
+ @del lj_bcdef.h lj_ffdef.h lj_libdef.h lj_recdef.h lj_folddef.h

@@ -1,0 +1,33 @@
+--- "luajit-windows\\src\\lua5.1.c"	1900-01-00 00:00:00 +0000
++++ lua5.1.c	1900-01-00 00:00:00 +0000
+@@ -135,6 +135,30 @@
+ FORWARD(luaopen_string)
+ FORWARD(luaopen_table)
+ 
++/* Additional functions from LuaJIT 2.1 */
++FORWARD(luaJIT_profile_dumpstack)
++FORWARD(luaJIT_profile_start)
++FORWARD(luaJIT_profile_stop)
++FORWARD(luaL_execresult)
++FORWARD(luaL_fileresult)
++FORWARD(luaL_loadbufferx)
++FORWARD(luaL_loadfilex)
++FORWARD(luaL_pushmodule)
++FORWARD(luaL_setfuncs)
++FORWARD(luaL_testudata)
++FORWARD(luaL_traceback)
++FORWARD(lua_copy)
++FORWARD(lua_isyieldable)
++FORWARD(lua_loadx)
++FORWARD(lua_tointegerx)
++FORWARD(lua_tonumberx)
++FORWARD(lua_upvalueid)
++FORWARD(lua_upvaluejoin)
++FORWARD(lua_version)
++FORWARD(luaopen_string_buffer)
++FORWARD(luaopen_bit)
++FORWARD(luaopen_ffi)
++FORWARD(luaopen_jit)
+ 
+ BOOL WINAPI
+ DllMain(HINSTANCE hinst, DWORD reason, LPVOID reserved)
