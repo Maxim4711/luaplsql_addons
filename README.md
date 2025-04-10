@@ -20,7 +20,7 @@ Some prerequisites have to be met - first one is [Buildtools für Visual Studio]
 
 ```batch
 scoop install patch wget unzip zip git
-git clone https://nexttry.net/git/maxim/luaplsql_addons.git
+git clone https://github.com/Maxim4711/luaplsql_addons.git
 cd luaplsql_addons
 mkdir build
 cd build
