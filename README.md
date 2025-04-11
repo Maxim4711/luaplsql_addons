@@ -62,4 +62,4 @@ copy LibDeflate\LibDeflate.lua luaplsql\PlugIns\lua\Tools
 
 xcopy ..\lua\* luaplsql\PlugIns\lua /s /i
 ```
-After that copy content of luasql\Plugins folder into corresponding Plugins folder of plsql developer. This setup produces 64 bit libraries, to build 32 bit - one needs just set corresponding variables for visual studio command prompt and download 32 bit IUP libraries instead of 64 bit.
+After that copy content of luaplsql\Plugins folder into corresponding Plugins folder of plsql developer. This setup produces 64 bit libraries, to build 32 bit - one needs just set corresponding variables for visual studio command prompt and download 32 bit IUP libraries instead of 64 bit.
